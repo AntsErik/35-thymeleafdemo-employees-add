@@ -32,4 +32,16 @@ public class EmployeeController {
 
         return "employees/list-employees";
     }
+
+    //add a new get-mapping to add employee
+    @GetMapping( "/showFormForAdd" )
+    public String showFormForAdd( Model theModel ){
+
+        //create the model attribute to bind the model data
+        Employee theEmployee = new Employee();
+
+        theModel.addAttribute( "employee", theEmployee );
+
+        return "employee/employee-form";
+    }
 }
