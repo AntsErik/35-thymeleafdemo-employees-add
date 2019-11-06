@@ -54,7 +54,7 @@ public class EmployeeController {
         //save the employee
         employeeService.save( theEmployee );
 
-        //use a redirect to prevent dublicate sumbissions
+        //use a redirect to prevent duplicate submissions
         return "redirect:/employees/list";
     }
 }
